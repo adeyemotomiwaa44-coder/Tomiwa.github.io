@@ -97,4 +97,20 @@ document.addEventListener('mousemove', (e) => {
         
         blob.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
     });
+
+});
+
+const button = document.getElementById("toggleBtn");
+const moreInfo = document.getElementById("moreInfo");
+
+button.addEventListener("click", function(){
+
+  if(moreInfo.classList.contains("hidden")){
+      moreInfo.classList.remove("hidden");
+      button.textContent = "Show Less";
+  } else {
+      moreInfo.classList.add("hidden");
+      button.textContent = "Show More";
+  }
+
 });
